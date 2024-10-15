@@ -1,0 +1,6 @@
+﻿title: Neonspires Studio
+email: contact@neonspires.com
+description: "Indie game studio developing Cloaked Protocol, a homage to Metal Gear Solid."
+baseurl: "" # This is left empty if the site is hosted on GitHub Pages directly.
+url: "https://www.neonspires.com"
+theme: minima

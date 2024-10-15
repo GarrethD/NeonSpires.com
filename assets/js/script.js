@@ -1,14 +1,13 @@
-﻿document.getElementById('subscribe-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const email = document.getElementById('email').value;
-    const messageElement = document.getElementById('subscription-message');
+﻿let slideIndex = 0;
+const slides = document.querySelector('.slides');
+const totalSlides = slides.children.length;
 
-    if (email) {
-        messageElement.textContent = `Thank you for subscribing, ${email}!`;
-        messageElement.style.color = '#ff4081';
-        this.reset();
-    } else {
-        messageElement.textContent = 'Please enter a valid email address.';
-        messageElement.style.color = 'red';
+function showNextSlide() {
+    slideIndex++;
+    if (slideIndex >= totalSlides) {
+        slideIndex = 0;
     }
-});
+    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
+setInterval(showNextSlide, 3000); // Change slide every 3 seconds
