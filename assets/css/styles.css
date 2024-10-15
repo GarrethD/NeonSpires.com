@@ -1,17 +1,19 @@
 ﻿body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    background: #2b2b2b;
-    color: #dcdcdc;
+    background: #ffffff;
+    color: #000000;
+    line-height: 1.6;
 }
 
 .header {
-    background: #1e1e1e;
+    background: #f0f0f0;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -22,7 +24,7 @@
 
 .studio-name {
     font-size: 1.8rem;
-    color: #ff79c6;
+    color: #333333;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -34,55 +36,33 @@
 }
 
 .nav a {
-    color: #dcdcdc;
+    color: #333333;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .nav a:hover {
-    color: #ff79c6;
+    color: #ff4081;
 }
 
 .hero {
-    background: #121212;
-    height: 100vh;
+    background: #ffffff;
+    padding: 5rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
-}
-
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-.hero .container {
-    position: relative;
-    z-index: 1;
 }
 
 .hero h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
-    color: #ff79c6;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    color: #f8f8f2;
+    color: #000000;
 }
 
 .cta-button {
-    background: #ff79c6;
-    color: #121212;
+    background: #ff4081;
+    color: #ffffff;
     border: none;
     padding: 0.75rem 1.5rem;
     text-transform: uppercase;
@@ -92,54 +72,36 @@
 }
 
 .cta-button:hover {
-    background: #bd93f9;
+    background: #e91e63;
 }
 
-.about, .games, .subscribe, .contact {
-    padding: 5rem 0;
+.about, .cloaked-protocol, .social, .contact {
+    padding: 3rem 0;
 }
 
-.games .game-cards {
+.social-links {
+    list-style: none;
+    padding: 0;
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.game-card {
-    background: #282a36;
-    padding: 2rem;
-    border-radius: 8px;
-    width: calc(33% - 1rem);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+.social-links a {
+    color: #ff4081;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.game-card h3 {
-    color: #bd93f9;
-}
-
-.subscribe input[type="email"] {
-    padding: 0.75rem;
-    width: calc(100% - 2rem);
-    margin-bottom: 1rem;
-    background: #3b3b3b;
-    border: 2px solid #ff79c6;
-    color: #f8f8f2;
-    border-radius: 5px;
-}
-
-.subscribe button {
-    background: #ff79c6;
-    border-radius: 5px;
+.social-links a:hover {
+    color: #e91e63;
 }
 
 .footer {
-    background: #1e1e1e;
+    background: #f0f0f0;
     text-align: center;
     padding: 1rem 0;
-}
-
-@media (max-width: 768px) {
-    .game-card {
-        width: calc(100% - 1rem);
-    }
+    margin-top: 2rem;
 }
