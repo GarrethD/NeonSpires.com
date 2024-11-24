@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Spires Studio - Asset Store</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Grid wrapper for single-item layout */
+        .character-grid-wrapper {
+            max-width: 900px; /* Limits width of grid wrapper */
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .character-grid {
+            display: flex;
+            flex-direction: column; /* Items stack vertically */
+            gap: 20px; /* Space between rows */
+        }
+
+        .character-grid div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--background);
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            padding: 10px;
+            max-width: 850px; /* Tight around the iframe */
+            width: 100%;
+        }
+
+        .character-grid iframe {
+            width: 100%;
+            max-width: 800px; /* Ensures widget doesn't overflow */
+            height: 175px; /* Matches widget's height */
+            border: none;
+        }
+
+        .name {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <img src="assets/images/Cloaked_Protocol_Logo.png" alt="Cloaked Protocol Logo" class="logo">
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="Asset Store.html">Asset Store</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <h2>Asset Store</h2>
+    <p>Explore our retro-inspired PS1-style assets, perfect for game developers looking to add nostalgia to their projects!</p>
+    <div class="character-grid-wrapper">
+        <div class="character-grid">
+            <div>
+                <iframe frameborder="0"
+                        src="https://itch.io/embed/3132146?border_width=5&amp;dark=true">
+                    <a href="https://neonspiresstudio.itch.io/psx-fruite-basket">PSX - Fruit Basket by Neon Spires Studio</a>
+                </iframe>
+        </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2024 Neon Spires Studio. All rights reserved.</p>
+    <div class="social-media">
+        <a href="https://x.com/GarrethDean" target="_blank" class="social-icon">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/garreth.dean/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/@GarrethDean1" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+</footer>
+</body>
+</html>
