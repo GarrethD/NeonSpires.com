@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const games = {
         "cloaked-protocol": {
             title: "CLOAKED PROTOCOL",
-            release: "Q4 2025",
+            release: "TBA",
             genre: "Stealth / Espionage Thriller",
             bg: "assets/images/CloakedprotocolPromoImage2.png",
             platforms: [
@@ -10,20 +10,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Xbox Series", class: "platform-badge platform-xbox" },
                 { name: "PC", class: "platform-badge platform-pc" }
             ],
-            trailer: "<iframe width='100%' height='200' src='https://www.youtube.com/embed/YOUR_VIDEO_ID' frameborder='0' allowfullscreen></iframe>",
+            trailer: "<iframe width='100%' height='200' src='https://www.youtube.com/watch?v=lg1WJigjm7M' frameborder='0' allowfullscreen></iframe>",
             steam: "https://store.steampowered.com/app/2738700/Cloaked_Protocol_Stealth_Action_Thriller/"
         },
         "project-augment": {
-            title: "PROJECT AUGMENT",
+            title: "PROJECT AUGMENT - A Cloaked Protocol experience",
             release: "TBA",
-            genre: "Arcade Action Survival",
+            genre: "Arcade Action wave shooter",
             bg: "assets/images/ProjectAugment_PromoImage_NoText.png",
             platforms: [
                 { name: "PS5", class: "platform-badge platform-ps" },
                 { name: "Xbox Series", class: "platform-badge platform-xbox" },
                 { name: "PC", class: "platform-badge platform-pc" }
             ],
-            trailer: "<iframe width='100%' height='200' src='https://www.youtube.com/embed/YOUR_VIDEO_ID' frameborder='0' allowfullscreen></iframe>",
+            trailer: "<iframe width='100%' height='200' src='https://www.youtube.com/watch?v=lg1WJigjm7M' frameborder='0' allowfullscreen></iframe>",
             steam: "https://store.steampowered.com/app/2738700/Cloaked_Protocol_Stealth_Action_Thriller/"
         }
     };
