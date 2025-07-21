@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbc04c9-37d1-4acc-99a4-d7e15bcc9cea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/css/gamepage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/CloakedProtoclNameOnly.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/CloakedProtocolLogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Logos/4 BG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/ProjectAugmentPageBG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/ProjectAugment_PromoImage_NoText.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/library_capsule_NoText.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/red body preview.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/red body transparent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/gameOverlay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_ProjectAugment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/Cloaked_Protocol_Logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Logos/Cloaked_Protocol_Logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/Overlay.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/Overlay.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/gameOverlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/gameOverlay.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +40,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "MakingThingsBetter",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -71,7 +60,7 @@
       <updated>1753006182707</updated>
       <workItem from="1753006184541" duration="918000" />
       <workItem from="1753007783680" duration="25000" />
-      <workItem from="1753098719814" duration="18190000" />
+      <workItem from="1753098719814" duration="28416000" />
     </task>
     <servers />
   </component>
