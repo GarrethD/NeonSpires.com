@@ -1,0 +1,178 @@
+:root {
+    --overlay-bg: rgba(12,16,26,0.95);
+    --overlay-blur: blur(0.5px);
+    --overlay-panel-bg: rgba(30,32,38,0.96);
+    --overlay-panel-radius: 20px;
+    --overlay-panel-shadow: 0 6px 40px #000b;
+    --overlay-panel-width: 600px;
+    --overlay-panel-min: 380px;
+    --overlay-panel-max: 98vw;
+    --overlay-panel-padding: 2.2em 2.4em 2em 2em;
+    --overlay-fade-time: 0.22s;
+    --brand-cyan: #00ffe7;
+    --brand-accent: #ff009d;
+    --font-main: 'Roboto', Arial, sans-serif;
+    --font-title: 'Bebas Neue', Impact, sans-serif;
+}
+
+/* Overlay: hidden by default */
+.game-fullscreen-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--overlay-bg);
+    animation: fade-in-overlay var(--overlay-fade-time) both;
+    overflow-y: auto;
+}
+@keyframes fade-in-overlay { from { opacity: 0; } to { opacity: 1; } }
+
+.game-fullscreen-overlay.visible {
+    display: flex;
+}
+
+/* Game fullscreen background (image) */
+.game-bg {
+    position: fixed;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.86;
+    z-index: 1;
+    pointer-events: none;
+    filter: var(--overlay-blur);
+}
+
+/* Info panel styles */
+.game-info-panel {
+    position: relative;
+    z-index: 2;
+    background: var(--overlay-panel-bg);
+    border-radius: var(--overlay-panel-radius);
+    box-shadow: var(--overlay-panel-shadow);
+    width: var(--overlay-panel-width);
+    min-width: var(--overlay-panel-min);
+    max-width: var(--overlay-panel-max);
+    padding: var(--overlay-panel-padding);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2.2em;
+    margin: 6vh auto 0 auto;
+    animation: fade-in-overlay 0.32s both;
+}
+
+.game-trailer {
+    flex-shrink: 0;
+    width: 340px;
+    height: 190px;
+    border-radius: 8px;
+    background: #15181d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-right: 1.8em;
+}
+
+.game-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.2em;
+}
+
+.game-title {
+    font-family: var(--font-title);
+    font-size: 2.6em;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+.game-subtitle {
+    font-family: var(--font-main);
+    font-size: 1.05em;
+    color: var(--brand-cyan);
+    letter-spacing: 0.04em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+}
+.game-desc {
+    font-size: 1.13em;
+    color: #e3e3e3;
+    font-family: var(--font-main);
+    margin-bottom: 0.7em;
+    max-width: 340px;
+}
+
+.game-platforms {
+    margin-bottom: 0.4em;
+    font-size: 1.8em;
+    color: var(--brand-cyan);
+}
+.game-platforms i {
+    margin-right: 0.22em;
+    vertical-align: middle;
+    filter: drop-shadow(0 1px 5px #0006);
+}
+.steam-btn {
+    margin-top: 1.1em;
+    display: inline-block;
+    background: var(--brand-cyan);
+    color: #222;
+    font-family: var(--font-title);
+    padding: 0.88em 2.2em;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    box-shadow: 0 2px 18px #0003;
+    transition: background 0.18s, color 0.18s;
+}
+.steam-btn:hover {
+    background: var(--brand-accent);
+    color: #fff;
+}
+
+/* Close button */
+.close-overlay {
+    position: absolute;
+    top: 24px;
+    right: 30px;
+    font-size: 2.6em;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.65;
+    transition: opacity 0.2s;
+    z-index: 10;
+}
+.close-overlay:hover { opacity: 1; }
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+    .game-info-panel {
+        flex-direction: column;
+        width: 98vw;
+        min-width: unset;
+        max-width: 99vw;
+        padding: 1.1em 0.7em;
+        gap: 1em;
+        margin: 4vh auto 0 auto;
+    }
+    .game-trailer {
+        width: 96vw; max-width: 360px; height: 190px;
+        margin: 0 auto 1em auto;
+    }
+    .close-overlay { top: 8px; right: 10px; font-size: 2em;}
+}
+@media (max-width: 520px) {
+    .game-info-panel { padding: 0.6em 0.2em; }
+    .game-title { font-size: 1.35em; }
+    .game-trailer { height: 115px; }
+}
