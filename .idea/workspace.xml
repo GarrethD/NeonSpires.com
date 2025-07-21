@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cbc04c9-37d1-4acc-99a4-d7e15bcc9cea" name="Changes" comment="" />
+    <list default="true" id="5cbc04c9-37d1-4acc-99a4-d7e15bcc9cea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/gameOverlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/gameOverlay.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +58,7 @@
       <updated>1753006182707</updated>
       <workItem from="1753006184541" duration="918000" />
       <workItem from="1753007783680" duration="25000" />
-      <workItem from="1753098719814" duration="28689000" />
+      <workItem from="1753098719814" duration="29370000" />
     </task>
     <servers />
   </component>
