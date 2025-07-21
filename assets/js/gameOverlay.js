@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Xbox Series", class: "platform-badge platform-xbox" },
                 { name: "PC", class: "platform-badge platform-pc" }
             ],
-            trailer: "<iframe width='100%' height='200' src='https://youtu.be/lg1WJigjm7M' frameborder='0' allowfullscreen></iframe>",
+            trailer: "<iframe width='100%' height='200' src='https://www.youtube.com/embed/watch?v=lg1WJigjm7M' frameborder='0' allowfullscreen></iframe>",
             steam: "https://store.steampowered.com/app/2738700/Cloaked_Protocol_Stealth_Action_Thriller/"
         },
         "project-augment": {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Xbox Series", class: "platform-badge platform-xbox" },
                 { name: "PC", class: "platform-badge platform-pc" }
             ],
-            trailer: "<iframe width='100%' height='200' src='https://youtu.be/lg1WJigjm7M' frameborder='0' allowfullscreen></iframe>",
+            trailer: "<iframe width='100%' height='200' src='https://www.youtube.com/embed/watch?v=lg1WJigjm7M' frameborder='0' allowfullscreen></iframe>",
             steam: "https://store.steampowered.com/app/2738700/Cloaked_Protocol_Stealth_Action_Thriller/"
         }
     };
