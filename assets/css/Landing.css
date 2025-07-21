@@ -14,6 +14,7 @@
     --font-title: 'Bebas Neue', Impact, sans-serif;
 }
 
+/* Reset & base */
 html, body {
     margin: 0;
     padding: 0;
@@ -29,6 +30,7 @@ html, body {
 ul, li { margin: 0; padding: 0; list-style: none; }
 a { color: inherit; text-decoration: none; }
 
+/* Slices (Landing) */
 .vertical-slice-landing {
     width: 100vw;
     height: 100vh;
@@ -46,8 +48,8 @@ a { color: inherit; text-decoration: none; }
     position: relative;
     background: transparent;
     overflow: hidden;
+    z-index: 1;
 }
-
 .game-slice {
     position: relative;
     flex-grow: var(--slice-initial-grow);
@@ -78,7 +80,6 @@ a { color: inherit; text-decoration: none; }
     box-shadow: 0 0 28px 2px var(--primary), 0 4px 80px 0 #000c;
 }
 .game-slice:not(:hover):not(:focus) { filter: grayscale(1) brightness(0.62); }
-
 .game-logo-center {
     position: absolute;
     top: 50%;
@@ -104,22 +105,24 @@ a { color: inherit; text-decoration: none; }
     transform: scale(1);
 }
 
-/* Logo (top left), navbar (top right), footer (bottom right) - all fixed positions */
+/* Logo (top left), navbar (top right), footer (bottom right) - now fixed and always on top! */
 .studio-logo {
-    position: absolute;
+    position: fixed !important;
     top: 50px;
     left: 100px;
-    z-index: 101;
+    z-index: 3000;
     height: 40px;
     filter: drop-shadow(0 0 4px var(--primary));
     background: transparent;
+    pointer-events: auto;
 }
 .main-header {
-    position: absolute;
+    position: fixed !important;
     top: 28px;
     right: 40px;
-    z-index: 99;
+    z-index: 3000;
     background: transparent;
+    pointer-events: auto;
 }
 .main-header .container {
     flex-direction: row;
@@ -145,12 +148,11 @@ nav a {
     transition: color 0.2s;
 }
 nav a:hover, nav a.active { color: var(--accent); }
-
 .bottom-navbar {
-    position: absolute;
+    position: fixed !important;
     right: 12px;
     bottom: 12px;
-    z-index: 99;
+    z-index: 3000;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -158,6 +160,7 @@ nav a:hover, nav a.active { color: var(--accent); }
     background: transparent;
     border-radius: 14px;
     padding: 0.5em 1.8em;
+    pointer-events: auto;
 }
 .bottom-links {
     display: flex;
@@ -183,4 +186,151 @@ nav a:hover, nav a.active { color: var(--accent); }
     letter-spacing: 1px;
 }
 
-/* Responsive (copy your earlier rules) ... */
+/* Overlay Styles */
+.game-fullscreen-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1200; /* lower than nav/logo/footer, higher than everything else */
+    pointer-events: none;
+    background: transparent;
+    display: none;
+}
+.game-fullscreen-overlay.visible { display: block; }
+
+.game-bg {
+    position: fixed;
+    inset: 0;
+    width: 100vw; height: 100vh;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: 1200;
+    pointer-events: none;
+}
+
+.game-info-panel {
+    position: fixed;
+    top: 50%;
+    right: 5vw;
+    transform: translateY(-50%);
+    z-index: 1220;
+    background: rgba(30,32,38,0.96);
+    border-radius: 22px;
+    box-shadow: 0 6px 40px #000b;
+    min-width: 320px;
+    max-width: 500px;
+    width: 430px;
+    padding: 2.2em 2.4em 2em 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+    pointer-events: auto;
+}
+
+.close-overlay {
+    position: fixed;
+    top: 50%;
+    right: 1vw;
+    transform: translateY(-50%);
+    font-size: 2.7em;
+    color: #fff;
+    background: rgba(22,22,32,0.55);
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    opacity: 0.8;
+    z-index: 1230;
+    transition: opacity 0.2s, background 0.18s;
+    pointer-events: auto;
+    width: 68px; height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close-overlay:hover { opacity: 1; background: rgba(30,32,38,0.98); }
+.close-overlay .close-txt {
+    display: block;
+    font-size: 0.38em;
+    letter-spacing: 0.13em;
+    opacity: 0.7;
+    margin-left: 2px;
+    font-family: var(--font-main);
+}
+
+/* Platform tags (badges) FromSoftware style */
+.platform-badge,
+.game-platform-tag {
+    display: inline-block;
+    background: #161a1f;
+    color: #00ffe7;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 0.99em;
+    padding: 2px 13px;
+    margin-right: 0.18em;
+    margin-bottom: 3px;
+    border: 1px solid #00ffe744;
+    box-shadow: 0 2px 8px #0002;
+    letter-spacing: 0.02em;
+}
+
+/* Panel contents */
+.game-title {
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    font-size: 2.1em;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.15em;
+}
+.game-details-row { display: flex; gap: 0.6em; font-size: 1.1em; margin-bottom: 0.35em; }
+.game-label { color: #b6c0d2; min-width: 88px; }
+.game-value { color: #fff; }
+.game-trailer {
+    width: 100%;
+    min-width: 260px;
+    min-height: 180px;
+    margin: 1.2em 0 0.5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #13161d;
+    overflow: hidden;
+}
+.steam-btn {
+    margin-top: 0.7em;
+    display: inline-block;
+    background: #00ffe7;
+    color: #222;
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    padding: 0.62em 2.1em;
+    border-radius: 10px;
+    font-size: 1.08em;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    box-shadow: 0 2px 18px #0003;
+    transition: background 0.18s, color 0.18s;
+    text-decoration: none;
+}
+.steam-btn:hover { background: #ff009d; color: #fff; }
+
+/* Responsive improvements */
+@media (max-width: 1100px) {
+    .studio-logo { top: 14px; left: 8px; height: 34px;}
+    .main-header { top: 7px; right: 10px;}
+    .game-info-panel {
+        right: 1vw;
+        min-width: 180px;
+        max-width: 98vw;
+        width: 93vw;
+        padding: 1.2em 0.9em;
+    }
+    .game-trailer { min-width: 120px; min-height: 100px; }
+    .close-overlay { right: 8px; }
+}
+@media (max-width: 700px) {
+    .game-info-panel { left: 0; right: 0; margin: 0 auto; }
+    .close-overlay { right: 8px; top: 15px; transform: none; }
+}
