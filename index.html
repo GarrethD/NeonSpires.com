@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>NeonSpires Studio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta name="description" content="Select a game from NeonSpires Studio">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/landing.css">
+    <link rel="stylesheet" href="assets/css/overlay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -27,17 +28,17 @@
 <main class="vertical-slice-landing">
     <div class="game-slice-container">
         <!-- Game 1 -->
-        <a href="#" class="game-slice" data-game="cloaked-protocol" style="background-image: url('assets/images/CloakedprotocolPromoImage2.png');">
+        <a href="#" class="game-slice" data-game="cloaked-protocol" style="--slice-bg: url('assets/images/CloakedprotocolPromoImage2.png'); background-image: url('assets/images/CloakedprotocolPromoImage2.png');">
             <div class="game-logo-center">
                 <img src="assets/images/CloakedProtocol_Logo.png" alt="Cloaked Protocol" class="game-logo-img">
             </div>
         </a>
-        <a href="#" class="game-slice" data-game="project-augment" style="background-image: url('assets/images/ProjectAugment_PromoImage_NoText.png');">
+        <!-- Game 2 -->
+        <a href="#" class="game-slice" data-game="project-augment" style="--slice-bg: url('assets/images/ProjectAugment_PromoImage_NoText.png'); background-image: url('assets/images/ProjectAugment_PromoImage_NoText.png');">
             <div class="game-logo-center">
                 <img src="assets/images/ProjectAugment_Logo.png" alt="Project Augment" class="game-logo-img">
             </div>
         </a>
-
     </div>
 </main>
 
@@ -45,18 +46,24 @@
 <div id="game-fullscreen-overlay" class="game-fullscreen-overlay">
     <div class="game-bg"></div>
     <div class="game-info-panel">
-        <button class="close-overlay" title="Close">&times;</button>
-        <div class="game-trailer" id="game-trailer"></div>
-        <div class="game-details">
-            <h1 class="game-title" id="game-title"></h1>
-            <div class="game-subtitle" id="game-subtitle"></div>
-            <div class="game-desc" id="game-desc"></div>
+        <div class="panel-content">
             <div class="game-platforms" id="game-platforms"></div>
+            <h1 class="game-title" id="game-title"></h1>
+            <div class="game-details-row">
+                <div class="game-label">Release Date:</div>
+                <div class="game-value" id="game-release"></div>
+            </div>
+            <div class="game-details-row">
+                <div class="game-label">Genre:</div>
+                <div class="game-value" id="game-genre"></div>
+            </div>
+            <div class="game-trailer" id="game-trailer"></div>
             <a href="#" id="game-steam" class="steam-btn" target="_blank">
-                <i class="fab fa-steam"></i> Wishlist on Steam
+                <i class="fab fa-steam"></i> OFFICIAL SITE
             </a>
         </div>
     </div>
+    <button class="close-overlay" title="Close"><span>&times;</span> <span class="close-txt">CLOSE</span></button>
 </div>
 
 <div class="bottom-navbar">

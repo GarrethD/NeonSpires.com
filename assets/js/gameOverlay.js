@@ -1,33 +1,39 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Game data
     const games = {
         "cloaked-protocol": {
             title: "CLOAKED PROTOCOL",
-            subtitle: "RETRO ESPIONAGE THRILLER",
-            desc: "Sneak, outwit, and survive in a 90s-inspired tactical stealth adventure. One man. One shot.",
+            release: "Q4 2025",
+            genre: "Stealth / Espionage Thriller",
             bg: "assets/images/CloakedprotocolPromoImage2.png",
-            trailer: "<iframe width='340' height='190' src='https://www.youtube.com/embed/YOUR_VIDEO_ID' frameborder='0' allowfullscreen></iframe>",
-            platforms: "<i class='fab fa-steam'></i> <i class='fab fa-xbox'></i> <i class='fab fa-playstation'></i>",
+            platforms: [
+                { name: "PS5", class: "platform-badge platform-ps" },
+                { name: "Xbox Series", class: "platform-badge platform-xbox" },
+                { name: "PC", class: "platform-badge platform-pc" }
+            ],
+            trailer: "<iframe width='100%' height='200' src='https://www.youtube.com/embed/YOUR_VIDEO_ID' frameborder='0' allowfullscreen></iframe>",
             steam: "https://store.steampowered.com/app/2738700/Cloaked_Protocol_Stealth_Action_Thriller/"
         },
         "project-augment": {
             title: "PROJECT AUGMENT",
-            subtitle: "A CLOAKED PROTOCOL STORY",
-            desc: "Take on the role of a PMC operative and survive waves of augmented horrors. Fast, brutal, and endlessly replayable — inspired by classic 90s action games.",
+            release: "TBA",
+            genre: "Arcade Action Survival",
             bg: "assets/images/ProjectAugment_PromoImage_NoText.png",
-            trailer: "<iframe width='340' height='190' src='https://www.youtube.com/embed/YOUR_VIDEO_ID2' frameborder='0' allowfullscreen></iframe>",
-            platforms: "<i class='fab fa-steam'></i> <i class='fab fa-xbox'></i> <i class='fab fa-playstation'></i>",
+            platforms: [
+                { name: "PS5", class: "platform-badge platform-ps" },
+                { name: "Xbox Series", class: "platform-badge platform-xbox" },
+                { name: "PC", class: "platform-badge platform-pc" }
+            ],
+            trailer: "<iframe width='100%' height='200' src='https://www.youtube.com/embed/YOUR_VIDEO_ID' frameborder='0' allowfullscreen></iframe>",
             steam: "https://store.steampowered.com/app/2738700/Cloaked_Protocol_Stealth_Action_Thriller/"
         }
     };
-
     const overlay = document.getElementById('game-fullscreen-overlay');
     const bg = overlay.querySelector('.game-bg');
     const title = document.getElementById('game-title');
-    const subtitle = document.getElementById('game-subtitle');
-    const desc = document.getElementById('game-desc');
-    const trailer = document.getElementById('game-trailer');
     const platforms = document.getElementById('game-platforms');
+    const release = document.getElementById('game-release');
+    const genre = document.getElementById('game-genre');
+    const trailer = document.getElementById('game-trailer');
     const steam = document.getElementById('game-steam');
     const closeBtn = overlay.querySelector('.close-overlay');
     const slices = document.querySelectorAll('.game-slice');
@@ -38,25 +44,34 @@ document.addEventListener("DOMContentLoaded", function() {
             e.preventDefault();
             const gameKey = this.dataset.game;
             if (!gameKey || !games[gameKey]) return;
-            // Hide slice grid
-            sliceContainer.style.display = 'none';
-            // Show overlay with correct info
+
+            // Show overlay, hide the selection grid
             overlay.classList.add('visible');
+            sliceContainer.style.display = 'none';
+
+            // Set the full background image
             bg.style.backgroundImage = `url('${games[gameKey].bg}')`;
+
+            // Fill details
             title.textContent = games[gameKey].title;
-            subtitle.textContent = games[gameKey].subtitle;
-            desc.textContent = games[gameKey].desc;
+            release.textContent = games[gameKey].release;
+            genre.textContent = games[gameKey].genre;
+            platforms.innerHTML = games[gameKey].platforms.map(p =>
+                `<span class="${p.class}">${p.name}</span>`
+            ).join(' ');
             trailer.innerHTML = games[gameKey].trailer;
-            platforms.innerHTML = games[gameKey].platforms;
             steam.href = games[gameKey].steam;
+
+            document.body.style.overflow = 'hidden'; // Prevent background scroll
         });
     });
 
-    // Close overlay
     closeBtn.addEventListener('click', function() {
         overlay.classList.remove('visible');
-        setTimeout(() => {
-            sliceContainer.style.display = 'flex';
-        }, 220);
+        sliceContainer.style.display = 'flex'; // Show the game selection again
+        document.body.style.overflow = '';
+        // Optional: clear background image
+        bg.style.backgroundImage = '';
+        trailer.innerHTML = '';
     });
 });

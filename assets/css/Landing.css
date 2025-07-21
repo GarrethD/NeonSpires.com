@@ -1,0 +1,186 @@
+﻿:root {
+    --slice-initial-grow: 1.1;
+    --slice-hover-grow: 1.45;
+    --slice-left: 1.5%;
+    --slice-right: 98.5%;
+    --slice-hover-left: 0.5%;
+    --slice-hover-right: 99.5%;
+    --game-logo-max-width: 40vw;
+    --game-logo-max-height: 150px;
+    --primary: #00ffe7;
+    --secondary: #181c24;
+    --accent: #ff009d;
+    --font-main: 'Roboto', Arial, sans-serif;
+    --font-title: 'Bebas Neue', Impact, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--font-main);
+    background: var(--secondary);
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+ul, li { margin: 0; padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+
+.vertical-slice-landing {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background: var(--secondary);
+    position: relative;
+    overflow: hidden;
+}
+.game-slice-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+}
+
+.game-slice {
+    position: relative;
+    flex-grow: var(--slice-initial-grow);
+    min-width: 0;
+    width: 1px;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-image: var(--slice-bg);
+    background-color: #222;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition:
+            flex-grow 0.65s cubic-bezier(.22,1,.36,1),
+            filter 0.65s cubic-bezier(.22,1,.36,1),
+            clip-path 0.65s cubic-bezier(.22,1,.36,1);
+    filter: grayscale(1) brightness(0.75);
+    cursor: pointer;
+    overflow: hidden;
+}
+.game-slice:hover, .game-slice:focus {
+    flex-grow: var(--slice-hover-grow);
+    filter: grayscale(0) brightness(1.05);
+    z-index: 3;
+    clip-path: polygon(var(--slice-hover-left) 0, 100% 0, var(--slice-hover-right) 100%, 0 100%);
+    box-shadow: 0 0 28px 2px var(--primary), 0 4px 80px 0 #000c;
+}
+.game-slice:not(:hover):not(:focus) { filter: grayscale(1) brightness(0.62); }
+
+.game-logo-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10;
+}
+.game-logo-img {
+    max-width: var(--game-logo-max-width);
+    max-height: var(--game-logo-max-height);
+    display: block;
+    filter: drop-shadow(0 2px 22px #000c);
+    opacity: 0;
+    transform: scale(0.96);
+    transition:
+            opacity 0.55s cubic-bezier(.22,1,.36,1),
+            transform 0.55s cubic-bezier(.22,1,.36,1);
+}
+.game-slice:hover .game-logo-img,
+.game-slice:focus .game-logo-img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Logo (top left), navbar (top right), footer (bottom right) - all fixed positions */
+.studio-logo {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    z-index: 101;
+    height: 40px;
+    filter: drop-shadow(0 0 4px var(--primary));
+    background: transparent;
+}
+.main-header {
+    position: absolute;
+    top: 28px;
+    right: 40px;
+    z-index: 99;
+    background: transparent;
+}
+.main-header .container {
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+    background: transparent;
+    padding: 0;
+    display: flex;
+}
+nav ul {
+    display: flex;
+    gap: 2em;
+    background: transparent;
+    padding: 0.3em 1.2em;
+    border-radius: 18px;
+    pointer-events: auto;
+}
+nav a {
+    color: var(--primary);
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+nav a:hover, nav a.active { color: var(--accent); }
+
+.bottom-navbar {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+    background: transparent;
+    border-radius: 14px;
+    padding: 0.5em 1.8em;
+}
+.bottom-links {
+    display: flex;
+    gap: 2em;
+}
+.bottom-links a {
+    color: var(--primary);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+.bottom-links a:hover {
+    color: var(--accent);
+}
+.bottom-placeholder {
+    color: #eee;
+    font-size: 1.1rem;
+    margin-left: 2em;
+    opacity: 0.7;
+    font-family: var(--font-title);
+    letter-spacing: 1px;
+}
+
+/* Responsive (copy your earlier rules) ... */
