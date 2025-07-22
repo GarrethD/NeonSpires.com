@@ -13,6 +13,30 @@
     --font-main: 'Roboto', Arial, sans-serif;
     --font-title: 'Bebas Neue', Impact, sans-serif;
 }
+.studio-logo-link {
+    position: fixed !important;
+    top: 50px;
+    left: 100px;
+    z-index: 3000;
+    display: block;
+    height: 40px;
+    width: auto;
+}
+.studio-logo-link img.studio-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0 4px var(--primary));
+    background: transparent;
+    pointer-events: auto;
+}
+.studio-logo-link:hover img,
+.studio-logo-link:focus img {
+    filter: drop-shadow(0 0 10px var(--primary));
+    opacity: 0.93;
+    transition: filter 0.2s, opacity 0.2s;
+}
+
 
 /* Reset & base */
 html, body {
