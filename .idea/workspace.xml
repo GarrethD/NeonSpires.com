@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbc04c9-37d1-4acc-99a4-d7e15bcc9cea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/css/wishlist.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wishlist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/gameOverlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/gameOverlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -38,7 +40,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "SubPages",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -58,7 +60,7 @@
       <updated>1753006182707</updated>
       <workItem from="1753006184541" duration="918000" />
       <workItem from="1753007783680" duration="25000" />
-      <workItem from="1753098719814" duration="30102000" />
+      <workItem from="1753098719814" duration="33115000" />
     </task>
     <servers />
   </component>
