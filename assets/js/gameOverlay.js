@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
             title: "CLOAKED PROTOCOL",
             release: "TBA",
             genre: "Stealth / Espionage Thriller",
+            description: "Cloaked Protocol is a stealth action thriller set in a retro-futuristic world. Players take on the role of a skilled operative to complete missions and uncover secrets.",
             bg: "assets/images/CloakedprotocolPromoImage2.png",
             platforms: [
                 { name: "PS5", class: "platform-badge platform-ps" },
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             title: "PROJECT AUGMENT - A Cloaked Protocol experience",
             release: "TBA",
             genre: "Arcade Action wave shooter",
+            description: "Project Augment is a arcade action style wave shooter set in the same universe as Cloaked Protocol.",
             bg: "assets/images/ProjectAugment_PromoImage_NoText.png",
             platforms: [
                 { name: "PS5", class: "platform-badge platform-ps" },
@@ -33,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const platforms = document.getElementById('game-platforms');
     const release = document.getElementById('game-release');
     const genre = document.getElementById('game-genre');
+    const description = document.getElementById('game-desc');
     const trailer = document.getElementById('game-trailer');
     const steam = document.getElementById('game-steam');
     const closeBtn = overlay.querySelector('.close-overlay');
@@ -56,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
             title.textContent = games[gameKey].title;
             release.textContent = games[gameKey].release;
             genre.textContent = games[gameKey].genre;
+            description.textContent = games[gameKey].description;
             platforms.innerHTML = games[gameKey].platforms.map(p =>
                 `<span class="${p.class}">${p.name}</span>`
             ).join(' ');

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="assets/css/overlay.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
         main.about-section {
             width: 100vw;
@@ -56,18 +58,25 @@
 <body>
 <a href="index.html" class="studio-logo-link" aria-label="Back to Landing Page">
     <img src="assets/images/CompanyLogo-White.png" alt="NeonSpires Logo" class="studio-logo">
-</a><header class="main-header">
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="wishlist.html">Wishlist</a></li>
-                <li><a href="newsletter.html">Newsletter</a></li>
-                <li><a href="pitchdeck.html">Pitchdeck</a></li>
-            </ul>
-        </nav>
-    </div>
+</a>
+<header class="main-header">
+    <a href="index.html" class="studio-logo-link">
+        <img src="assets/images/CompanyLogo-White.png" class="studio-logo" alt="NeonSpires Logo">
+    </a>
+    <button class="burger-menu" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-wrapper">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="pitchdeck.html">Pitchdeck</a></li>
+        </ul>
+    </nav>
 </header>
+
+
 
 <main class="about-section">
     <section class="about-panel">
@@ -117,5 +126,6 @@
         <p>&copy; 2024 NeonSpires Studio. All Rights Reserved.</p>
     </div>
 </footer>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
