@@ -99,8 +99,10 @@ document.addEventListener("DOMContentLoaded", function() {
         pinModal.classList.remove('active');
         pinInput.value = '';
         pinError.textContent = '';
+        if (pendingGameKey) unlocked[pendingGameKey] = false; // <<--- Add this line
         pendingGameKey = null;
     });
+
 
     // Close overlay logic
     closeBtn.addEventListener('click', function() {

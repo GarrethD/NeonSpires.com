@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbc04c9-37d1-4acc-99a4-d7e15bcc9cea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/js/pitchdeckPins.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/newsletter.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/newsletter.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/pitchdeck.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/pitchdeck.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/pitchdeck.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/pitchdeck.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pitchdeck.html" beforeDir="false" afterPath="$PROJECT_DIR$/pitchdeck.html" afterDir="false" />
@@ -63,7 +60,7 @@
       <updated>1753006182707</updated>
       <workItem from="1753006184541" duration="918000" />
       <workItem from="1753007783680" duration="25000" />
-      <workItem from="1753098719814" duration="43246000" />
+      <workItem from="1753098719814" duration="44074000" />
     </task>
     <servers />
   </component>

@@ -33,7 +33,6 @@
     width: 100%;
     max-width: 1000px;
 }
-
 .game-panel {
     background-size: cover;
     background-position: center;
@@ -60,14 +59,12 @@
     pointer-events: none;
 }
 .game-panel > * { position: relative; z-index: 2; }
-
 .game-panel:hover,
 .game-panel:focus-within {
     box-shadow: 0 10px 48px #00ffe733, 0 2px 30px #000d;
     transform: scale(1.032);
     z-index: 2;
 }
-
 .game-logo-center {
     position: absolute;
     top: 40%;
@@ -79,7 +76,6 @@
     justify-content: center;
     width: 100%;
 }
-
 .game-logo-img {
     max-width: var(--game-logo-max-width);
     max-height: var(--game-logo-max-height);
@@ -90,7 +86,6 @@
     display: block;
     transition: transform 0.18s, opacity 0.18s;
 }
-
 .game-panel-title {
     position: absolute;
     top: 70px;
@@ -104,17 +99,15 @@
     z-index: 2;
     pointer-events: none;
     margin: 0;
-    white-space: nowrap;       /* <--- prevents wrapping */
-    overflow: hidden;          /* <--- hides overflow if too long */
-    text-overflow: ellipsis;   /* <--- adds ... if too long */
-    max-width: 90%;            /* <--- ensures it doesn't overflow panel */
+    white-space: nowrap;       /* prevents wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
 }
-
-
 .view-pitch-btn {
     position: absolute;
     left: 50%;
-    bottom: 32px;  /* lower the button */
+    bottom: 32px;
     transform: translateX(-50%);
     min-width: 270px;
     padding: 0.8em 2.6em;
@@ -122,7 +115,6 @@
     font-family: 'Bebas Neue', Impact, sans-serif;
     border-radius: 12px;
 }
-
 .view-pitch-btn:hover {
     background: #ff009d;
     color: #fff;
@@ -134,12 +126,16 @@
     inset: 0;
     z-index: 1800;
     background: rgba(24, 28, 36, 0.98);
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.17s;
 }
 .pitchdeck-overlay.active {
-    display: flex;
+    opacity: 1;
+    pointer-events: auto;
 }
 .pitchdeck-modal {
     position: relative;
@@ -180,7 +176,6 @@
     border-radius: 8px;
     min-height: 350px;
 }
-
 /* ===== Overlay Close Button (middle left) ===== */
 .close-overlay {
     position: absolute;
@@ -220,12 +215,16 @@
     inset: 0;
     background: rgba(15,20,30,0.92);
     z-index: 2500;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
-    animation: fadeIn 0.2s;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s;
 }
 .pin-modal.active {
+    opacity: 1;
+    pointer-events: auto;
     display: flex;
 }
 .pin-modal-content {
@@ -239,9 +238,19 @@
     flex-direction: column;
     align-items: center;
     gap: 1.2em;
+    position: relative;
+    opacity: 0;
+    transform: scale(0.96);
+    animation: modalPopIn 0.21s cubic-bezier(.5,1.6,.3,1) forwards;
+}
+@keyframes modalPopIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 .pin-modal-content h2 {
-    font-family: var(--font-title);
+    font-family: var(--font-title, 'Bebas Neue', Impact, sans-serif);
     font-size: 1.23em;
     color: #fff;
     font-weight: 700;
@@ -293,23 +302,6 @@
     background: var(--accent, #ff009d);
     color: #fff;
 }
-.pin-modal {
-    /* ...your other styles... */
-    position: fixed;
-    z-index: 3000;
-    left: 50%; top: 50%;
-    transform: translate(-50%,-50%);
-    background: #222c;
-    border-radius: 14px;
-    box-shadow: 0 4px 30px #0007;
-    padding: 2.5em 2.2em 1.8em 2.2em;
-    min-width: 320px;
-    max-width: 92vw;
-    text-align: center;
-    display: none;
-}
-.pin-modal.active { display: block; }
-
 .close-pin-btn {
     position: absolute;
     top: 10px; right: 13px;
@@ -320,7 +312,7 @@
     cursor: pointer;
     opacity: 0.75;
     z-index: 6;
-    transition: opacity 0.17s;
+    transition: opacity 0.17s, color 0.18s;
 }
 .close-pin-btn:hover { opacity: 1; color: #00ffe7; }
 
@@ -351,4 +343,3 @@
         max-width: 95%;
     }
 }
-
