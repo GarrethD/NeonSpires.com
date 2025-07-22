@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cbc04c9-37d1-4acc-99a4-d7e15bcc9cea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/css/nav.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/responsive.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/landing.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/landing.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/newsletter.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/newsletter.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/overlay.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/overlay.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/pitchdeck.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/pitchdeck.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/wishlist.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/wishlist.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/characters.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_ProjectAugment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/gameOverlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/gameOverlay.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newsletter.html" beforeDir="false" afterPath="$PROJECT_DIR$/newsletter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pitchdeck.html" beforeDir="false" afterPath="$PROJECT_DIR$/pitchdeck.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wishlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/wishlist.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +60,7 @@
       <updated>1753006182707</updated>
       <workItem from="1753006184541" duration="918000" />
       <workItem from="1753007783680" duration="25000" />
-      <workItem from="1753098719814" duration="52016000" />
+      <workItem from="1753098719814" duration="53580000" />
     </task>
     <servers />
   </component>
