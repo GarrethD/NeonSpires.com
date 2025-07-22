@@ -1,13 +1,13 @@
-﻿let slideIndex = 0;
-const slides = document.querySelector('.slides');
-const totalSlides = slides.children.length;
+﻿document.addEventListener("DOMContentLoaded", function() {
+    const burger = document.querySelector('.burger-menu');
+    const nav = document.querySelector('.nav-wrapper');
 
-function showNextSlide() {
-    slideIndex++;
-    if (slideIndex >= totalSlides) {
-        slideIndex = 0;
+    if (burger && nav) {
+        burger.addEventListener('click', function() {
+            const isOpen = nav.classList.toggle('open');
+            burger.classList.toggle('open', isOpen);
+            burger.setAttribute('aria-expanded', isOpen ? "true" : "false");
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
     }
-    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
-}
-
-setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+});

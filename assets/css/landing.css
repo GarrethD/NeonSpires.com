@@ -12,6 +12,22 @@
     --accent: #ff009d;
     --font-main: 'Roboto', Arial, sans-serif;
     --font-title: 'Bebas Neue', Impact, sans-serif;
+
+    /* ===== Panel sizing variables ===== */
+    /*--game-logo-max-width: 500px;*/
+    /*--game-logo-max-height: 180px;*/
+    --game-panel-width: 410px;
+    --game-panel-height: 260px;
+
+    /* ===== Modal and overlay variables ===== */
+    --pitchdeck-modal-width: 1000px;
+    --pitchdeck-modal-height: 580px;
+    --iframe-width: 950px;
+    --iframe-height: 600px;
+
+    /* ===== Close button ===== */
+    --close-btn-offset: -78px;  /* Negative = outside modal, positive = inside */
+    --close-btn-size: 2.5em;
 }
 .studio-logo-link {
     position: fixed !important;
@@ -339,22 +355,3 @@ nav a:hover, nav a.active { color: var(--accent); }
     text-decoration: none;
 }
 .steam-btn:hover { background: #ff009d; color: #fff; }
-
-/* Responsive improvements */
-@media (max-width: 1100px) {
-    .studio-logo { top: 14px; left: 8px; height: 34px;}
-    .main-header { top: 7px; right: 10px;}
-    .game-info-panel {
-        right: 1vw;
-        min-width: 180px;
-        max-width: 98vw;
-        width: 93vw;
-        padding: 1.2em 0.9em;
-    }
-    .game-trailer { min-width: 120px; min-height: 100px; }
-    .close-overlay { right: 8px; }
-}
-@media (max-width: 700px) {
-    .game-info-panel { left: 0; right: 0; margin: 0 auto; }
-    .close-overlay { right: 8px; top: 15px; transform: none; }
-}

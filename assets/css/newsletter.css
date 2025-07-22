@@ -1,12 +1,6 @@
-:root {
-    --primary: #00ffe7;
-    --secondary: #181c24;
-    --accent: #ff009d;
-    --font-main: 'Roboto', Arial, sans-serif;
-    --font-title: 'Bebas Neue', Impact, sans-serif;
-}
+/* --- Only include :root in global.css, not here! --- */
 
-/* Main newsletter layout */
+/* ====== Newsletter Page ====== */
 .newsletter-main {
     min-height: 50vh;
     display: flex;
@@ -15,7 +9,6 @@
     background: var(--secondary);
     padding: 60px 0 40px 0;
 }
-
 .newsletter-panel {
     background: rgba(28,32,40,0.95);
     border-radius: 22px;
@@ -30,7 +23,6 @@
     align-items: center;
     gap: 1.6em;
 }
-
 .newsletter-panel h1 {
     font-family: var(--font-title);
     font-size: 2.4em;
@@ -53,7 +45,7 @@
     margin-top: 1.7em;
 }
 
-/* Manual or Embedded form styles */
+/* ===== Form Styles ===== */
 .newsletter-form,
 #emailoctopus-form-anchor form,
 #emailoctopus-form-anchor .eo-form {
@@ -110,6 +102,7 @@
     color: #fff;
 }
 
+/* Labels and feedback */
 .newsletter-form label,
 #emailoctopus-form-anchor label,
 #emailoctopus-form-anchor .eolabel {
@@ -127,17 +120,6 @@
     margin-bottom: 0.7em !important;
     text-align: center;
 }
-
 #emailoctopus-form-anchor .eosubmit {
     margin-top: 0.8em !important;
-}
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-    .newsletter-panel {
-        min-width: 0;
-        max-width: 99vw;
-        padding: 1.3em 0.7em 1.2em 0.7em;
-    }
-    .newsletter-panel h1 { font-size: 1.4em; }
 }
