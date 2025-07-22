@@ -1,68 +1,119 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Learn about NeonSpires Studios, creators of Cloaked Protocol - a stealth action espionage game inspired by classic PS1 aesthetics.">
     <meta charset="UTF-8">
-    <meta name="robots" content="index, follow">
+    <title>About NeonSpires Studio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About NeonSpires - Cloaked Protocol</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta name="description" content="Meet NeonSpires Studio and its solo developer. Discover our vision for indie games and what sets us apart.">
+    <link rel="stylesheet" href="assets/css/landing.css">
+    <link rel="stylesheet" href="assets/css/overlay.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        main.about-section {
+            width: 100vw;
+            min-height: 100vh;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4em 0 3em 0;
+        }
+        .about-panel {
+            background: rgba(30,32,38,0.97);
+            box-shadow: 0 6px 40px #000b;
+            border-radius: 14px;
+            max-width: 620px;
+            padding: 3em 3em 2em 3em;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.1em;
+        }
+        .about-title {
+            font-family: 'Bebas Neue', Impact, sans-serif;
+            font-size: 2.6em;
+            color: var(--primary);
+            letter-spacing: 0.08em;
+            margin-bottom: 0.2em;
+        }
+        .about-desc {
+            font-size: 1.15em;
+            line-height: 1.6;
+            color: #e3e3e3;
+        }
+        .about-highlight {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        @media (max-width: 700px) {
+            .about-panel { padding: 2em 1em; max-width: 98vw; }
+            .about-title { font-size: 2.1em; }
+        }
+    </style>
 </head>
 <body>
-<header class="header">
+<img src="assets/images/CompanyLogo-White.png" alt="NeonSpires Logo" class="studio-logo">
+<header class="main-header">
     <div class="container">
-        <img src="assets/images/Cloaked_Protocol_Logo.png" alt="Cloaked Protocol Logo" class="logo">
-        <nav class="nav">
+        <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About</a></li>
-                <li><a href="characters.html">Characters</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="pitchdeck.html">Pitchdeck</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<main>
-    <div class="about">
-        <h2>About NeonSpires Studios</h2>
-        <p>
-            Welcome to NeonSpires Studios, an indie game development studio dedicated to crafting immersive and nostalgic gaming experiences. We specialize in bringing the retro gaming charm of the <strong>PS1 era</strong> into the modern age with a fresh twist. Our flagship title, <strong>Cloaked Protocol</strong>, is a <strong>stealth action espionage game</strong> that captures the spirit of classic games, featuring <strong>pixel art</strong>, a retro-inspired soundtrack, and engaging gameplay.
-        </p>
-        <p>
-            At NeonSpires, we are passionate about delivering rich narratives that resonate with today’s audience. Inspired by the golden age of gaming, our mission is to merge retro aesthetics with modern gameplay elements to create truly unforgettable experiences. <a href="index.html">Explore more about Cloaked Protocol here</a>.
-        </p>
-
-        <h2>Our Passion Project: Cloaked Protocol</h2>
-        <p>
-            <strong>Cloaked Protocol</strong> is our love letter to the stealth-action classics of the 90s, combining deep storytelling with tactical espionage. Set in a dystopian future, players will navigate a world of deception, uncover hidden conspiracies, and outsmart enemies using strategy and stealth. The game features stunning <strong>PS1-style graphics</strong>, <strong>stealth mechanics</strong>, and challenging missions, designed to engage players in a world where appearances are deceiving.
-        </p>
-        <p>
-            Want to know more about the characters in Cloaked Protocol? <a href="characters.html">Meet the cast here</a>.
-        </p>
-
-        <h2>Join Our Discord Community</h2>
-        <p>
-            Be part of the conversation! Connect with fellow gamers, share your feedback, and get behind-the-scenes insights into the development of <strong>Cloaked Protocol</strong>. <a href="https://discord.gg/zGCf8vQcUG" target="_blank">Join our Discord community today</a>.
-        </p>
-    </div>
+<main class="about-section">
+    <section class="about-panel">
+        <h1 class="about-title">About NeonSpires Studio</h1>
+        <div class="about-desc">
+            NeonSpires Studio is a one-person indie studio dedicated to making the kind of games that stick with you long after you put down the controller.
+        </div>
+        <div class="about-desc">
+            NeonSpires is all about exploring new ideas, surprising genres, and capturing the thrill and emotion of gaming’s best moments—whether it’s a retro throwback, a modern experiment, or something in between.
+        </div>
+        <div class="about-desc">
+            Every project is built from the ground up by one developer, drawing from a broad mix of inspirations and styles. The goal? Games that feel personal, handcrafted, and just a little bit different from the usual.
+        </div>
+        <div class="about-desc">
+            While NeonSpires doesn’t stick to a single art style or genre, you’ll always find a commitment to atmosphere, story, and gameplay. Sometimes nostalgic, sometimes weird, sometimes bold—always indie.
+        </div>
+        <div class="about-desc" style="color:var(--primary); font-weight:500;">
+            Thanks for stopping by. Whether you’re here for a game, a vibe, or just to support solo creators—welcome!
+        </div>
+    </section>
 </main>
 
-<footer class="footer">
+
+
+<div class="bottom-navbar">
+    <div class="bottom-links">
+        <a href="https://bsky.app/profile/garrethdean.bsky.social" target="_blank" aria-label="BlueSky" class="bsky-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <circle cx="16" cy="16" r="16" fill="#00ffe7"/>
+                <path d="M23 13.4c-.7-.6-1.6-.8-2.4-.6-.8.2-1.4.9-1.8 1.6-.3-.7-.9-1.4-1.8-1.6-.8-.2-1.7 0-2.4.6-.9.7-1.1 2.1-.5 3.1.3.5.8 1.1 1.9 1.6.5.2 1.1.4 1.7.6h.2c.6-.2 1.2-.3 1.7-.6 1.1-.5 1.6-1.1 1.9-1.6.6-1 .4-2.4-.5-3.1z" fill="#fff"/>
+            </svg>
+        </a>
+        <a href="https://x.com/GarrethDean" target="_blank" aria-label="X" class="x-icon">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.youtube.com/@GarrethDean1" target="_blank" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://store.steampowered.com/app/2738700/Cloaked_Protocol_Stealth_Action_Thriller/" target="_blank" aria-label="Steam">
+            <i class="fa-brands fa-steam"></i>
+        </a>
+    </div>
+    <span class="bottom-placeholder"></span>
+</div>
+<footer class="main-footer">
     <div class="container">
-        <p>&copy; 2024 NeonSpires. All Rights Reserved.</p>
-        <div class="social-media">
-            <a href="https://x.com/GarrethDean" target="_blank" class="social-icon">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/garreth.dean/" target="_blank" class="social-icon">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.youtube.com/@GarrethDean1" target="_blank" class="social-icon">
-                <i class="fab fa-youtube"></i>
-            </a>
-        </div>
+        <p>&copy; 2024 NeonSpires Studio. All Rights Reserved.</p>
     </div>
 </footer>
 </body>
