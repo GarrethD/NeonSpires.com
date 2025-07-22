@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
             genre: "Stealth / Espionage Thriller",
             description: "Cloaked Protocol is a stealth action thriller set in a retro-futuristic world. Players take on the role of a skilled operative to complete missions and uncover secrets.",
             bg: "assets/images/CloakedprotocolPromoImage2.png",
+            fog: "assets/videos/fog.webm",
             platforms: [
                 { name: "PS5", class: "platform-badge platform-ps" },
                 { name: "Xbox Series", class: "platform-badge platform-xbox" },
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
             genre: "Arcade Action wave shooter",
             description: "Project Augment is a arcade action style wave shooter set in the same universe as Cloaked Protocol.",
             bg: "assets/images/ProjectAugment_PromoImage_NoText.png",
+            fog: "assets/videos/hellsmoke.webm",
             platforms: [
                 { name: "PS5", class: "platform-badge platform-ps" },
                 { name: "Xbox Series", class: "platform-badge platform-xbox" },
@@ -29,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
             steam: "https://store.steampowered.com/app/2738700/Cloaked_Protocol_Stealth_Action_Thriller/"
         }
     };
+
     const overlay = document.getElementById('game-fullscreen-overlay');
     const bg = overlay.querySelector('.game-bg');
     const title = document.getElementById('game-title');
@@ -41,41 +44,51 @@ document.addEventListener("DOMContentLoaded", function() {
     const closeBtn = overlay.querySelector('.close-overlay');
     const slices = document.querySelectorAll('.game-slice');
     const sliceContainer = document.querySelector('.game-slice-container');
+    const fogVideo = document.getElementById('smoke-fog-video');
 
     slices.forEach(function(slice){
         slice.addEventListener('click', function(e){
             e.preventDefault();
             const gameKey = this.dataset.game;
             if (!gameKey || !games[gameKey]) return;
+            const game = games[gameKey];
 
-            // Show overlay, hide the selection grid
+            // Show overlay, hide selection grid
             overlay.classList.add('visible');
             sliceContainer.style.display = 'none';
-
-            // Set the full background image
-            bg.style.backgroundImage = `url('${games[gameKey].bg}')`;
+            bg.style.backgroundImage = `url('${game.bg}')`;
 
             // Fill details
-            title.textContent = games[gameKey].title;
-            release.textContent = games[gameKey].release;
-            genre.textContent = games[gameKey].genre;
-            description.textContent = games[gameKey].description;
-            platforms.innerHTML = games[gameKey].platforms.map(p =>
+            title.textContent = game.title;
+            release.textContent = game.release;
+            genre.textContent = game.genre;
+            description.textContent = game.description;
+            platforms.innerHTML = (game.platforms || []).map(p =>
                 `<span class="${p.class}">${p.name}</span>`
             ).join(' ');
-            trailer.innerHTML = games[gameKey].trailer;
-            steam.href = games[gameKey].steam;
+            trailer.innerHTML = game.trailer;
+            steam.href = game.steam;
 
-            document.body.style.overflow = 'hidden'; // Prevent background scroll
+            // Set fog video per game, always update and play
+            fogVideo.pause();
+            fogVideo.src = game.fog;
+            fogVideo.currentTime = 0;
+            fogVideo.playbackRate = 0.68; // Slow fog effect, tweak as you want
+            fogVideo.load();
+            fogVideo.play().catch(()=>{});
+
+            document.body.style.overflow = 'hidden';
         });
     });
 
     closeBtn.addEventListener('click', function() {
         overlay.classList.remove('visible');
-        sliceContainer.style.display = 'flex'; // Show the game selection again
+        sliceContainer.style.display = 'flex';
         document.body.style.overflow = '';
-        // Optional: clear background image
         bg.style.backgroundImage = '';
         trailer.innerHTML = '';
+        fogVideo.pause();
+        fogVideo.removeAttribute('src');
+        fogVideo.load();
     });
 });
